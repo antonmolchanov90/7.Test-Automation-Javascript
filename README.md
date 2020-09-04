@@ -1,1 +1,1 @@
-# 7.Test-Automation-Javascript
+Repo for tests [JS]
