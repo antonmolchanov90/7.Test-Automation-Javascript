@@ -17,4 +17,16 @@ describe('Test Footbal endpoints', () => {
       expect(response.status).toBe(403)
       expect(response.body).toHaveProperty('message')
     });
+    it('Should fail to get last fixtures from league id', async () => {
+      const response = await request('https://api-football-v1.p.rapidapi.com')
+      .get('/v2/fixtures/league/524/last/10')
+      expect(response.status).toBe(401)
+      expect(response.body).toHaveProperty('message')
+    });
+    it('Should fail to team from id', async () => {
+      const response = await request('https://api-football-v1.p.rapidapi.com')
+      .get('/v2/teams/team/33')
+      expect(response.status).toBe(401)
+      expect(response.body).toHaveProperty('message')
+    });
 });
